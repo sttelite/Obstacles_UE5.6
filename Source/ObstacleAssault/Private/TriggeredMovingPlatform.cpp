@@ -19,10 +19,10 @@ ATriggeredMovingPlatform::ATriggeredMovingPlatform()
 void ATriggeredMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
-    AnchorLocation  = GetActorLocation();
+    	AnchorLocation  = GetActorLocation();
 	InitialVelocity = PlatformVelocity;                      
 	TriggerZone->OnComponentBeginOverlap.AddDynamic(this, &ATriggeredMovingPlatform::OnTriggerBegin);
-    TriggerZone->OnComponentEndOverlap.AddDynamic(this, &ATriggeredMovingPlatform::OnTriggerEnd);
+    	TriggerZone->OnComponentEndOverlap.AddDynamic(this, &ATriggeredMovingPlatform::OnTriggerEnd);
 
 }
 
@@ -40,8 +40,8 @@ void ATriggeredMovingPlatform::OnTriggerBegin(
 		bActive = true;
 		HalfCyclesDone = 0;
 		PlatformVelocity = InitialVelocity;
-        StartLocation = AnchorLocation;
-        SetActorLocation(AnchorLocation);
+        	StartLocation = AnchorLocation;
+        	SetActorLocation(AnchorLocation);
 	}
 }
 
