@@ -24,7 +24,7 @@ protected:
 
 	bool bActive = false;
 	int32 OverlapCount = 0;
-    FVector AnchorLocation; 
+    	FVector AnchorLocation; 
 	int32 HalfCyclesDone = 0;
 
 	UFUNCTION()
