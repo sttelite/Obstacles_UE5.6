@@ -13,7 +13,7 @@ ATriggeredMovingPlatform::ATriggeredMovingPlatform()
 	TriggerZone->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	TriggerZone->SetCollisionResponseToAllChannels(ECR_Ignore);
 	TriggerZone->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
-    TriggerZone->InitBoxExtent(FVector(150.f, 150.f, 40.f));
+        TriggerZone->InitBoxExtent(FVector(150.f, 150.f, 40.f));
 }
 
 void ATriggeredMovingPlatform::BeginPlay()
